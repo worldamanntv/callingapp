@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/pg4.dart';
 
-class pagetthree3 extends StatefulWidget {
+class pagethree3 extends StatefulWidget {
   @override
-  State<pagetthree3> createState() => _MyHomePageState();
+  State<pagethree3> createState() => _pagethree3State();
 }
 
-class _MyHomePageState extends State<pagetthree3> {
+class _pagethree3State extends State<pagethree3> {
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -20,192 +21,92 @@ class _MyHomePageState extends State<pagetthree3> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("2nd pag"),
+        title: Text("My Compaigns"),
       ),
-      body: Stack(
+      body:Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Column(
+          Row(
             children: [
               Container(
-                padding: EdgeInsets.all(20),
-
-
-                  child: Text("Wlecome taybba bhai")),
-
-              Container(
-               // padding: EdgeInsets.all(10),
-                padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 60.0),
-                decoration: BoxDecoration(
-                  color: Colors.purple.shade700,
-                  borderRadius: BorderRadius.circular(20)
-                ),
-                child: Text("Start calling",style: TextStyle(fontSize: 15,color: Colors.white),),
-              ),
-
-              Container(
-                margin: EdgeInsets.all(20),
-                
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                  children: [
-
-
-                    Container(
-                      padding: EdgeInsets.only(left: 17,right: 17,top: 30,bottom: 30),
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset("assets/marketing.png", height: 40,color: Colors.white,),
-                          Text("My compaines",style: TextStyle(
-                              color: Colors.white
-                          )),
-                          // Text("(1)"
-                          //     ,style: TextStyle(
-                          //         color: Colors.white
-                          //     ))
-                        ],
-                      ),
+                width: 100,
+                height: 20,
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => pg4()));
+                  },
+                  child: Container(
+                    //alignment: Alignment.topCenter,
+                    padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 50.0),
+                    decoration: BoxDecoration(
+                      color: Colors.purple.shade700,
+                    borderRadius: BorderRadius.circular(20.0)
                     ),
+                    child:  Text("Sample_Contacts_File.csv-Compaigns", style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
 
+                      ),),
+                    ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  margin: EdgeInsets.all(30),
+                    child: Text("Assigned"),
 
-
-                    Container(
-                      padding: EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset("assets/telephone.png", height: 40,color: Colors.white,),
-                        //  Icon(Icons.alarm,size: 40,color: Colors.white,),
-                          Text("My Leads",style: TextStyle(
-                              color: Colors.white
-                          ),),
-           //               Text("(1)",style: TextStyle(
-             //                 color: Colors.white
-               //           ))
-                        ],
-                      ),
-                    )
-                  ],
+                   ),
+              ),
+              Container(
+                margin: EdgeInsets.all(30),
+                child: Text(
+                  "Open"
+                ),
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                margin: EdgeInsets.all(30),
+                child: Text(
+                  "In-Progress"
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(20),
-
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                  children: [
-
-
-                    Container(
-                      padding: EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset("assets/checklist.png", height: 40,color: Colors.white,),
-                   //       Icon(Icons.alarm_rounded,size: 40, color: Colors.white),
-                          Text("My Tasks",style: TextStyle(
-                              color: Colors.white
-                          )),
-                          // Text("(1)"
-                          //     ,style: TextStyle(
-                          //         color: Colors.white
-                          //     ))
-                        ],
-                      ),
-                    ),
-
-
-                    Container(
-                      padding: EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset("assets/report.png", height: 40, color: Colors.white,),
-                          //Icon(Icons.alarm,size: 40,color: Colors.white,),
-                          Text("My Report",style: TextStyle(
-                              color: Colors.white
-                          ),),
-                          // Text("(1)",style: TextStyle(
-                          //     color: Colors.white
-                          // ))
-                        ],
-                      ),
-                    )
-                  ],
+                margin: EdgeInsets.all(30),
+                child: Text(
+                  "Closed"
                 ),
               ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
               Container(
-                margin: EdgeInsets.all(20),
-
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                  children: [
-
-
-                    Container(
-                      padding: EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset("assets/call.png", height: 40,color: Colors.white,),
-                          //Icon(Icons.alarm_rounded,size: 40, color: Colors.white),
-                          Text("Call Logs",style: TextStyle(
-                              color: Colors.white
-                          )),
-                          // Text("(1)"
-                          //     ,style: TextStyle(
-                          //         color: Colors.white
-                          //     ))
-                        ],
-                      ),
-                    ),
-
-
-                    Container(
-                      padding: EdgeInsets.only(left: 17,right: 17,top: 30,bottom: 30),
-                    //  padding: EdgeInsets.all(30),
-                      decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: Column(
-                        children: [
-                          Icon(Icons.directions_walk,size: 40,color: Colors.white,),
-                          Text("Walk-in Leads",style: TextStyle(
-                              color: Colors.white
-                          ),),
-                          // Text("(1)",style: TextStyle(
-                          //     color: Colors.white
-                          // ))
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
+                margin: EdgeInsets.all(30),
+                child: Text("Un-Assigned"),
+              )
             ],
           )
         ],
-      )
+      ),
+
     );
   }
 }

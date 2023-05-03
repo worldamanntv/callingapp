@@ -66,7 +66,7 @@ class _MyHomePageState extends State<pageone1> {
                       child: Column(
                         children: [
                           Image.asset("assets/marketing.png", height: 40,color: Colors.white,),
-                          Text("My compaines",style: TextStyle(
+                          Text("My compaignes",style: TextStyle(
                               color: Colors.white
                           )),
                           // Text("(1)"

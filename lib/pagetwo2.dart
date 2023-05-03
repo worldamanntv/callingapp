@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/pagetthree3.dart';
 
 class pagetwo2 extends StatefulWidget {
   @override
@@ -27,8 +28,13 @@ class _MyHomePageState extends State<pagetwo2> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Text("search", style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => pagethree3()));
+                  },
+                  child: Container(
+                    child: Text("search", style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+                  ),
                 ),
               ),
               Padding(
@@ -90,4 +96,6 @@ class _MyHomePageState extends State<pagetwo2> {
 
       );
   }
+
+  //pagethree3() {}
 }
