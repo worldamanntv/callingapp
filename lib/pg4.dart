@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:untitled/pg5.dart';
 
 class pg4 extends StatefulWidget {
   @override
@@ -29,6 +29,39 @@ class _pg4State extends State<pg4> {
               height: 30,
 
             ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => pg5()));
+              },
+              child: ListTile(
+                onTap: (){},
+                selected: true,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(16.0),
+                  ),
+                ),
+                selectedTileColor: Colors.indigoAccent.shade100,
+                title: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => pg5()));
+                  },
+                  child: Text(
+                    "New Leads",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
+                  ),
+                ),
+                subtitle: Text(
+                  "Leads, which haven't been called  so far",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w200),
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,color: Colors.white,weight: 2,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+
+            ),
             ListTile(
               onTap: (){},
               selected: true,
@@ -39,10 +72,10 @@ class _pg4State extends State<pg4> {
               ),
               selectedTileColor: Colors.indigoAccent.shade100,
               title: Text(
-                "New Leads",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
+                "Follow-up Leads",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
               ),
               subtitle: Text(
-                "Leads, which haven't been called  so far",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w200),
+                "Leads, which are scheduled to be called later",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w200),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios,color: Colors.white,weight: 2,
@@ -62,33 +95,10 @@ class _pg4State extends State<pg4> {
               ),
               selectedTileColor: Colors.indigoAccent.shade100,
               title: Text(
-                "New Leads",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
+                "Not Connected Leads",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
               ),
               subtitle: Text(
-                "Leads, which haven't been called  so far",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w200),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios,color: Colors.white,weight: 2,
-              ),
-            ),
-            SizedBox(
-              height: 30,
-
-            ),
-            ListTile(
-              onTap: (){},
-              selected: true,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(16.0),
-                ),
-              ),
-              selectedTileColor: Colors.indigoAccent.shade100,
-              title: Text(
-                "New Leads",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),
-              ),
-              subtitle: Text(
-                "Leads, which haven't been called  so far",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w200),
+                "Leads, which were not connected in previous attempt",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w200),
               ),
               trailing: Icon(
                 Icons.arrow_forward_ios,color: Colors.white,weight: 2,
