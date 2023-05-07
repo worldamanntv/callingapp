@@ -51,7 +51,7 @@ class _pg10State extends State<pg10> {
               // margin: EdgeInsets.all(20),
               width: 100,
               height: 400,
-              // color: Colors.white,
+            //   color: Colors.white,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -59,7 +59,7 @@ class _pg10State extends State<pg10> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset("assets/wk",height: 90,color: Colors.white,),
+                      Image.asset("assets/wk.png",height: 80,)
                     ],
                   ),
                   Row(
@@ -72,15 +72,17 @@ class _pg10State extends State<pg10> {
               ),
 
             ),
+
             SizedBox(
-              height: 2,
+              height: 120,
             ),
+
             Container(
               margin: EdgeInsets.all(10),
               width: 130,
-              height: 150,
+              height: 40,
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.purple,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     width: 0.5,
@@ -99,74 +101,20 @@ class _pg10State extends State<pg10> {
                     children: [
                       Column(
                         children: [
-                          Text("Total Break:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),)
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Add Lead",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
+                          ))
                         ],
                       ),
-                      Column(
-                        children: [
-                          Text("0",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),)
-                        ],
-                      )
-                    ],
-                  ),
-                  Divider(
-                    thickness: 0.5,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          Text("Time:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text("Activity",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text("Description",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)
-                        ],
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 60,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("No history found")
-                    ],
-                  )
 
+                    ],
+                  ),
                 ],
               ),
             )
           ],
         )
-            // Positioned(
-            //   bottom: 20,
-            //   left: 20,
-            //   right: 20,
-            //   child: GestureDetector(
-            //     onTap: (){
-            //       Navigator.push(context, MaterialPageRoute(builder: (context) => pg11()));
-            //     },
-            //     child: Container(
-            //       padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 80.0),
-            //       decoration: BoxDecoration(
-            //           color: Colors.purple.shade700,
-            //           borderRadius: BorderRadius.circular(10)
-            //       ),
-            //
-            //       child:Center(child: Text("Add Lead",style: TextStyle(fontSize: 15,color: Colors.white),)),
-            //     ),
-            //   ),
-            // )
-
     );
   }
 
