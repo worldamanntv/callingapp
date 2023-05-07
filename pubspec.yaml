@@ -70,6 +70,8 @@ flutter:
     - assets/report.png
     - assets/call.png
     - assets/marketing.png
+    - assets/clipboard.png
+    - assets/wk.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

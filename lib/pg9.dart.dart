@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/pg10.dart';
 
+
 class pg9 extends StatefulWidget {
   @override
   State<pg9> createState() => _pg9State();
@@ -89,28 +90,30 @@ class _pg9State extends State<pg9> with SingleTickerProviderStateMixin {
 
 
         body:
-        //ListView(
-          // padding: EdgeInsets.zero,
-          // children: [
-          //
-          //   Center(
-          //     child:
-          GestureDetector(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => pg10()));
-            },
-            child: Container(
-                  margin: EdgeInsets.all(30),
-                  child: Column(
-                    children: [
-                      Icon(Icons.calendar_month,
-                        size: 50,),
-                      Text('No Call Logs',),
-                    ],
-                  ),
+             Center(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => pg10()));
+                },
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 110,
+                      child: Column(
+                        children: [
+                          Image.asset("assets/clipboard.png",height: 90,color: Colors.blue,),
+                          Text("No Call Logs")
+                        ],
+                      ),
+                    )
 
+                  ],
                 ),
-          ),
+              ),
+
+            ),
+
+
                 );
   }
 

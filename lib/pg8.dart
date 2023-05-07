@@ -27,235 +27,444 @@ class _pg8State extends State<pg8> {
 
         body: ListView(
           children: [
-            ListTile(
-              leading: Icon(Icons.calendar_month),
-              title: Text("April 19,2023,"),
-              trailing: Text("Wednesday"),
-            ),
-           Row(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => pg9()));
+              },
+              child: Container(
+                margin: EdgeInsets.all(20),
+                height: 50,
+                width: 200,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        Icon(Icons.calendar_month_rounded),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                       Text("23 April, 2023,",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Wednesday")
+                      ],
+                    )
 
-             children: [
-               GestureDetector(
-                 onTap: (){
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => pg9()));
-                 },
-                 child: Container(
-                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white,),
-
-                   child: Column(
-                     children: [
-                       Container(
-                         decoration: BoxDecoration(
-                           borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10) ),
-                           color: Colors.indigoAccent,),
-                         padding: EdgeInsets.all(15),
-                         child:
-                             Text('Call Attempted',style: TextStyle(color: Colors.white),),
-                       ),
-                       Container(
-                         padding: EdgeInsets.all(8),
-                         child:
-                             Text('2'),
-                       ),
-                     ],
-                   ),
-                 ),
-               ),
-
-               Container(
-                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white,),
-
-                 child: Column(
-                   children: [
-                     Container(
-                         decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10) ),color: Colors.indigoAccent,),
-                         padding: EdgeInsets.all(15),
-                         child:
-                         Text('Call Connected',style: TextStyle(color: Colors.white),)
-                     ),
-                     Container(
-                       padding: EdgeInsets.all(8),
-                       child:
-                       Text('1'),
-                     ),
-                   ],
-                 ),
-               ),
-             ],
-           ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-              children: [
-                Container(
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,),
-
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10) ),
-                            color: Colors.indigoAccent,),
-                          padding: EdgeInsets.all(10),
-                          child:
-                          Text('Call Time',style: TextStyle(color: Colors.white),)
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(20),
-                        child:
-                        Text('0:00:00 Hrs'),
-                      ),
-                    ],
-                  ),
+                  ],
                 ),
-
-                Container(
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,),
-
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-
-                          decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10) ),color: Colors.indigoAccent,),
-                          padding: EdgeInsets.all(20),
-                          child:
-                          Text('Avg Call Duration',style: TextStyle(color: Colors.white),)
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(8),
-                        child:
-                        Text('0:00 mins'),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+              ),
             ),
             Container(
+             // margin: EdgeInsets.all(20),
+              width: 100,
+              height: 240,
+             // color: Colors.white,
+              child: Column(
+              //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                              height: 101,
+                              width: 160,
+                              // color: Colors.white,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  width: 0.5,
+                                  color: Colors.transparent,
+                                ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 0.5,
+                                    )
+                                  ]
+                              ),
 
+                              child: Column(
+                                children: [
+                                  Container(
+
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                      color: Colors.purple,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(10),
+                                          topLeft: Radius.circular(10),
+                                        ),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("Call Attempted",style: TextStyle(color: Colors.white),)
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10)),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("2",style: TextStyle(color: Colors.black),)
+                                      ],
+                                    ),
+                                  ),
+
+                                ],
+                              )
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                              height: 101,
+                              width: 160,
+                              // color: Colors.white,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    width: 0.5,
+                                    color: Colors.transparent,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 0.5,
+                                    )
+                                  ]
+                              ),
+
+                              child: Column(
+                                children: [
+                                  Container(
+
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        color: Colors.purple,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(10),
+                                          topLeft: Radius.circular(10),
+                                        ),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("Call Connected",style: TextStyle(color: Colors.white),)
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10)),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("1",style: TextStyle(color: Colors.black),)
+                                      ],
+                                    ),
+                                  ),
+
+                                ],
+                              )
+                          )
+                        ],
+                      ),
+
+
+                      // Column(
+                      //   children: [
+                      //     Container(
+                      //       color: Colors.black,
+                      //       child: Text("dkfsd"),
+                      //     )
+                      //   ],
+                      // )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                              height: 101,
+                              width: 160,
+                              // color: Colors.white,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    width: 0.5,
+                                    color: Colors.transparent,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 0.5,
+                                    )
+                                  ]
+                              ),
+
+                              child: Column(
+                                children: [
+                                  Container(
+
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        color: Colors.purple,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(10),
+                                          topLeft: Radius.circular(10),
+                                        ),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("Call Time",style: TextStyle(color: Colors.white),)
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10)),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("0:00:00 hrs",style: TextStyle(color: Colors.black),)
+                                      ],
+                                    ),
+                                  ),
+
+                                ],
+                              )
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                              height: 101,
+                              width: 160,
+                              // color: Colors.white,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    width: 0.5,
+                                    color: Colors.transparent,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 0.5,
+                                    )
+                                  ]
+                              ),
+
+                              child: Column(
+                                children: [
+                                  Container(
+
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        color: Colors.purple,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(10),
+                                          topLeft: Radius.circular(10),
+                                        ),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("Avg Call Duration",style: TextStyle(color: Colors.white),)
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50,
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10)),
+                                        border: Border.all(
+                                          width: 0.5,
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text("0:00 mins",style: TextStyle(color: Colors.black),)
+                                      ],
+                                    ),
+                                  ),
+
+                                ],
+                              )
+                          )
+                        ],
+                      ),
+
+
+                      // Column(
+                      //   children: [
+                      //     Container(
+                      //       color: Colors.black,
+                      //       child: Text("dkfsd"),
+                      //     )
+                      //   ],
+                      // )
+                    ],
+                  ),
+                  // Row(
+                  //   children: [
+                  //     Column(
+                  //       children: [
+                  //         Container(
+                  //           height: 50,
+                  //           width: 130,
+                  //           color: Colors.white,
+                  //           child: Text("helo"),
+                  //         )
+                  //       ],
+                  //     ),
+                  //     Column(
+                  //       children: [
+                  //         Container(
+                  //           color: Colors.black,
+                  //           child: Text("dkfsd"),
+                  //         )
+                  //       ],
+                  //     )
+                  //   ],
+                  // )
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 2,
+            ),
+            Container(
               margin: EdgeInsets.all(10),
+              width: 130,
+              height: 150,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
                   color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                      width: 0.5,
-                      color: Colors.transparent
+                    width: 0.5,
+                    color: Colors.transparent,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      blurRadius: 1,
+                      blurRadius: 0.5,
                     )
                   ]
-
               ),
               child: Column(
-                //  crossAxisAlignment: CrossAxisAlignment.,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text("Total Break 0",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
-                      ),
-                      // Text(''),
-                      // Text('')
-                    ],
-                  ),
-                  Divider(
-                    height: 10,
-
-                  ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Time",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
-                          ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(left: 8.0,top: 4),
-                          //   child: Text("Open"),
-                          // // ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(bottom: 4.0),
-                          //   child: Text(''),
-                          // ),
+                          Text("Total Break:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),)
                         ],
                       ),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Activity",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
-                          ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(top: 4.0),
-                          //   child: Text("20 Apr 2023"),
-                          // ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(bottom: 4.0),
-                          //   child: Text("02:58 PM"),
-                          // )
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text("Description",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
-                          ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(right: 8.0, bottom: 8.0, top: 4.0),
-                          //   child: Text(''),
-                          // ),
-                          // Text('')
+                          Text("0",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),)
                         ],
                       )
                     ],
                   ),
-                  // Divider(
-                  //   height: 10,
-                  // ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                  Divider(
+                    thickness: 0.5,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 50,bottom: 15.0),
-                        child: Text('No History Found',),
+                      Column(
+                        children: [
+                          Text("Time:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)
+                        ],
                       ),
-
-                      // Padding(
-                      //   padding: const EdgeInsets.only(right: 8.0),
-                      //   child: Text('Sample_contact_file.cv'),
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(right: 8.0),
-                      //   child: Text("v-campaign"),
-                      // )
-
+                      Column(
+                        children: [
+                          Text("Activity",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text("Description",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)
+                        ],
+                      )
                     ],
                   ),
-
+                  SizedBox(
+                    height: 60,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("No history found")
+                    ],
+                  )
 
                 ],
               ),
-
-            ),
-
+            )
           ],
         )
     );
