@@ -89,27 +89,70 @@ class _pg13State extends State<pg13> with SingleTickerProviderStateMixin {
 
 
 
-        body:
-            Positioned(
-              bottom: 20,
-              left: 20,
-              right: 20,
-              child: GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => pg13()));
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 80.0),
-                  decoration: BoxDecoration(
-                      color: Colors.purple.shade700,
-                      borderRadius: BorderRadius.circular(10)
-                  ),
+        body: ListView(
+          children: [
+            Column(
+              children: [
 
-                  child:Center(child: Text("Add Lead",style: TextStyle(fontSize: 15,color: Colors.white),)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("Time Elapsed  |",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                    )),
+                    VerticalDivider(
+                      width: 1,
+                    ),
+                    Center(child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("00:04",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.greenAccent),),
+                    )),
+
+                  ],
                 ),
-              ),
-            ),
 
+
+              ],
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 130,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: Colors.purple,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 0.5,
+                    color: Colors.transparent,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 0.5,
+                    )
+                  ]
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Add Lead",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
+                          ))
+                        ],
+                      ),
+
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        )
                        );
   }
 
