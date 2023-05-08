@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/pg10.dart';
+import 'package:untitled/pg14.dart';
 
 class pg13 extends StatefulWidget {
   @override
@@ -42,7 +42,41 @@ class _pg13State extends State<pg13> with SingleTickerProviderStateMixin {
           backgroundColor: Colors.purpleAccent,
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Text("Call logs",),
+          title: Column(
+            children: [
+              Row(
+               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Leads Detail",),
+
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Icon(Icons.science_outlined),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Icon(Icons.add),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Icon(Icons.cached),
+                    ],
+                  ),
+                ],
+              )
+
+            ],
+          ),
           bottom: TabBar(
             controller: _tabController,
             indicatorColor: Colors.white,
@@ -115,6 +149,331 @@ class _pg13State extends State<pg13> with SingleTickerProviderStateMixin {
 
               ],
             ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => pg14()));
+              },
+              child: Container(
+                margin: EdgeInsets.all(10),
+                width: 130,
+                height: 140,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 0.5,
+                      color: Colors.transparent,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 0.5,
+                      )
+                    ]
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Contact Name",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                            ))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.edit)
+                            ))
+                          ],
+                        ),
+
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Contact Number",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                            ))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("9650992629",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w300,color: Colors.black),),
+                            ))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(Icons.edit)
+                            ))
+                          ],
+                        ),
+
+                      ],
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Column(
+                            children: [
+                              Center(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("Campaign Name",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                              ))
+                            ],
+                          ),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Center(child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Sample_Contacts_files.csv-campaing",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w300,color: Colors.black),),
+                                ))
+                              ],
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 0.5,
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 130,
+              height: 65,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 0.5,
+                    color: Colors.transparent,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 0.5,
+                    )
+                  ]
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Contact history",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextButton(
+                              child: Text("Views"),
+                              onPressed: (){
+                                return null;
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.white,
+                                  elevation: 2,
+                                  backgroundColor: Colors.purple),
+                            ),
+                          ))
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 0.5,
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              width: 130,
+              height: 270,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 0.5,
+                    color: Colors.transparent,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 0.5,
+                    )
+                  ]
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Other Details",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(Icons.edit)
+                          ))
+                        ],
+                      ),
+
+                    ],
+                  ),
+                  Divider(
+                    thickness: 1,
+                    indent: 8.0,
+                    endIndent: 8.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("List Name",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Sample_Contact_file.CSV",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w300,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Alternate_Contact_Number 1:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Alternate_Contact_Number 2:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Email_Address:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Executive_mobile_number:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("8035392930:",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w300,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Center(child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Contact Address:",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                          ))
+                        ],
+                      ),
+
+
+                    ],
+                  ),
+
+
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 0.5,
+            ),
             Container(
               margin: EdgeInsets.all(10),
               width: 130,
@@ -141,7 +500,7 @@ class _pg13State extends State<pg13> with SingleTickerProviderStateMixin {
                         children: [
                           Center(child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Add Lead",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
+                            child: Text("Call Now",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),),
                           ))
                         ],
                       ),
