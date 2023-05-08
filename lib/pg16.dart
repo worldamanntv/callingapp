@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/pg16.dart';
 
 
-class pg15 extends StatefulWidget {
+class pg16 extends StatefulWidget {
   @override
-  State<pg15> createState() => _pg15State();
+  State<pg16> createState() => _pg16State();
 }
 
-class _pg15State extends State<pg15> with SingleTickerProviderStateMixin {
+class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
     final List<Tab> topTabs = <Tab>[
@@ -122,106 +121,101 @@ class _pg15State extends State<pg15> with SingleTickerProviderStateMixin {
         body:ListView(
             children: [
 
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => pg16()));
-                },
-                child: Container(
-                  margin: EdgeInsets.only(right: 10,left: 10,top: 8,bottom: 8),
-                  width: 130,
-                  height: 130,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        width: 0.5,
-                        color: Colors.transparent,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 0.5,
-                        )
-                      ]
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Center(child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text("was call connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
-                              ))
-                            ],
-                          ),
+              Container(
+                margin: EdgeInsets.only(right: 10,left: 10,top: 8,bottom: 8),
+                width: 130,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 0.5,
+                      color: Colors.transparent,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 0.5,
+                      )
+                    ]
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("was call connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                            ))
+                          ],
+                        ),
 
 
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.all(10),
-                                width: 130,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                    color: Colors.red,
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Colors.transparent,
-                                    ),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 0.5,
-                                      )
-                                    ]
-                                ),
-                                child: Center(
-                                  child: Text("Not Connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.all(10),
+                              width: 130,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    width: 0.5,
+                                    color: Colors.transparent,
                                   ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 0.5,
+                                    )
+                                  ]
+                              ),
+                              child: Center(
+                                child: Text("Not Connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),
                                 ),
                               ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.all(10),
-                                width: 130,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      width: 0.5,
-                                      color: Colors.transparent,
-                                    ),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 0.5,
-                                      )
-                                    ]
-                                ),
-                                child: Center(
-                                  child: Text("Yes Connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.all(10),
+                              width: 130,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    width: 0.5,
+                                    color: Colors.transparent,
                                   ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 0.5,
+                                    )
+                                  ]
+                              ),
+                              child: Center(
+                                child: Text("Yes Connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.white),
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
+                        ),
 
 
-                        ],
-                      ),
+                      ],
+                    ),
 
-                    ],
-                  ),
+                  ],
                 ),
               ),
               SizedBox(
@@ -253,7 +247,7 @@ class _pg15State extends State<pg15> with SingleTickerProviderStateMixin {
                           children: [
                             Center(child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text("Please specify the reason?",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
+                              child: Text("Update Stage",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
                             ))
                           ],
                         ),
@@ -273,20 +267,24 @@ class _pg15State extends State<pg15> with SingleTickerProviderStateMixin {
                       indent: 8.0,
                       endIndent: 8.0,
                     ),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Column(
                           children: [
                             Center(child: Padding(
-                              padding: const EdgeInsets.only(right: 3),
-                              child: Icon(Icons.circle_outlined),
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Update Stage",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
                             ))
                           ],
                         ),
                         Column(
                           children: [
-                            Center(child: Text("Did not pick",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
+                            Center(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("*",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,color: Colors.greenAccent),)
+                            ))
                           ],
                         ),
 
