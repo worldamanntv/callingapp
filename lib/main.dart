@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:untitled/pageone1.dart';
 import 'package:untitled/pg1.dart';
+
+import 'navigation.dart';
 // import 'package:untitled/pagetwo2.dart';
 // import 'package:untitled/pagetthree3.dart';
 
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -80,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
 
-      body: pg1()// This trailing comma makes auto-formatting nicer for build methods.
+      body: navigation()// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
