@@ -224,7 +224,7 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
               Container(
                 margin: EdgeInsets.only(right: 10,left: 10,top: 8,bottom: 8),
                 width: 130,
-                height: 330,
+                height: 410,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
@@ -303,7 +303,7 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
                         ),
                         Column(
                           children: [
-                            Center(child: Text("Busy in another call",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
+                            Center(child: Text("lost-to-competition",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
                           ],
                         ),
 
@@ -322,7 +322,7 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
                         ),
                         Column(
                           children: [
-                            Center(child: Text("User disconnected the call",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
+                            Center(child: Text("already-purchased",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
                           ],
                         ),
 
@@ -341,7 +341,7 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
                         ),
                         Column(
                           children: [
-                            Center(child: Text("Switch off",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
+                            Center(child: Text("not interested",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
                           ],
                         ),
 
@@ -360,7 +360,7 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
                         ),
                         Column(
                           children: [
-                            Center(child: Text("Out of coverage area/Network issue",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
+                            Center(child: Text("call not connected",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
                           ],
                         ),
 
@@ -372,14 +372,41 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
                         Column(
                           children: [
                             Center(child: Padding(
-                              padding: const EdgeInsets.only(right: 3),
-                              child: Icon(Icons.circle_outlined),
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Select Next action",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
                             ))
                           ],
                         ),
                         Column(
                           children: [
-                            Center(child: Text("Call not connected/can not be completed",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
+                            Center(child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("*",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,color: Colors.greenAccent),)
+                            ))
+                          ],
+                        ),
+
+                      ],
+                    ),
+                    Divider(
+                      thickness: 1,
+                      indent: 8.0,
+                      endIndent: 8.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: [
+                            Center(child: Padding(
+                              padding: const EdgeInsets.only(right: 3),
+                              child: Icon(Icons.square_outlined),
+                            ))
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Center(child: Text("Copy this lead to other campaign",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
                           ],
                         ),
 
@@ -391,78 +418,42 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
                         Column(
                           children: [
                             Center(child: Padding(
-                              padding: const EdgeInsets.only(right: 3),
-                              child: Icon(Icons.circle_outlined),
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Dispose Remarks",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
                             ))
                           ],
                         ),
-                        Column(
-                          children: [
-                            Center(child: Text("Other reason",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
-                          ],
-                        ),
-
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
                         Column(
                           children: [
                             Center(child: Padding(
-                              padding: const EdgeInsets.only(right: 3),
-                              child: Icon(Icons.circle_outlined),
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("*",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,color: Colors.greenAccent),)
                             ))
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child: Text("Incorrect/Invalid number",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
-                          ],
-                        ),
-
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Column(
-                          children: [
-                            Center(child: Padding(
-                              padding: const EdgeInsets.only(right: 3),
-                              child: Icon(Icons.circle_outlined),
-                            ))
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child: Text("Incoming calls not available",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
                           ],
                         ),
 
                       ],
                     ),
                     Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Column(
-                            children: [
-                              Center(child: Padding(
-                                padding: const EdgeInsets.only(right: 3),
-                                child: Icon(Icons.circle_outlined),
-                              ))
-                            ],
-                          ),
-                          Expanded(
-                            child: Column(
-                              children: [
-                                Center(child: Text("Number not in use/does not exist/out of service",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w300,color: Colors.black),))
-                              ],
-                            ),
-                          ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
 
-                        ],
+                          keyboardType: TextInputType.multiline,
+                          maxLength: 1500,
+                          maxLines: 4,
+                          decoration: InputDecoration(
+                            hintText: "Type Here.",
+                            border: OutlineInputBorder(
+
+                                borderRadius: BorderRadius.circular(10),
+
+
+                            ),
+
+                            // contentPadding: EdgeInsets.all(8),
+                          ),
+                        ),
                       ),
                     ),
 
@@ -475,56 +466,7 @@ class _pg16State extends State<pg16> with SingleTickerProviderStateMixin {
               SizedBox(
                 height: 0.5,
               ),
-              Container(
-                margin: EdgeInsets.only(right: 10,left: 10,top: 8,bottom: 0),
-                width: 130,
-                height: 80,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      width: 0.5,
-                      color: Colors.transparent,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 0.5,
-                      )
-                    ]
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Column(
-                          children: [
-                            Center(child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text("Select next action",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,color: Colors.black),),
-                            ))
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text("*",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,color: Colors.greenAccent),)
-                            ))
-                          ],
-                        ),
 
-                      ],
-                    ),
-                    Divider(
-                      thickness: 1,
-                      indent: 8.0,
-                      endIndent: 8.0,
-                    ),
-
-                  ],
-                ),
-              ),
               // SizedBox(
               //   height: 0.5,
               // ),
