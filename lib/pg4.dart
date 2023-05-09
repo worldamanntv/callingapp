@@ -26,8 +26,8 @@ class _pg4State extends State<pg4> {
         body: Column(
           children: [
             SizedBox(
-              width: 60,
-              height: 30,
+
+              height: 10,
 
             ),
             GestureDetector(
@@ -63,7 +63,7 @@ class _pg4State extends State<pg4> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 10,
 
             ),
             Padding(
@@ -89,7 +89,7 @@ class _pg4State extends State<pg4> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 10,
 
             ),
             Padding(
