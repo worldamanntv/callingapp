@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:untitled/pageone1.dart';
+import 'package:untitled/pg1.dart';
 // import 'package:untitled/pagetwo2.dart';
 // import 'package:untitled/pagetthree3.dart';
 
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
 
-      body: pageone1()// This trailing comma makes auto-formatting nicer for build methods.
+      body: pg1()// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

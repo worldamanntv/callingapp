@@ -70,10 +70,10 @@ class _MyHomePageState extends State<pageone1> {
                           Text("My compaignes",style: TextStyle(
                               color: Colors.white
                           )),
-                          // Text("(1)"
-                          //     ,style: TextStyle(
-                          //         color: Colors.white
-                          //     ))
+                          Text("(1)"
+                               ,style: TextStyle(
+                                 color: Colors.white
+                              ))
                         ],
                       ),
                     ),
