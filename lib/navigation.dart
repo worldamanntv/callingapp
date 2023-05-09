@@ -536,7 +536,7 @@ class _navigationState extends State<navigation> {
                       ),
                       GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => pg12()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => pg13()));
                         },
                         child: Container(
                             height: 50,
@@ -579,7 +579,7 @@ class _navigationState extends State<navigation> {
                         children: [
                           GestureDetector(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => pg13()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => pg14()));
                             },
                             child: Container(
                                 height: 50,
@@ -619,7 +619,7 @@ class _navigationState extends State<navigation> {
                       ),
                       GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => pg14()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => pg15()));
                         },
                         child: Container(
                             height: 50,
@@ -662,7 +662,7 @@ class _navigationState extends State<navigation> {
                         children: [
                           GestureDetector(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => pg15()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => pg16()));
                             },
                             child: Container(
                                 height: 50,
@@ -702,7 +702,7 @@ class _navigationState extends State<navigation> {
                       ),
                       GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => pg16()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => pg17()));
                         },
                         child: Container(
                             height: 50,
@@ -738,56 +738,7 @@ class _navigationState extends State<navigation> {
                   SizedBox(
                     height: 12,
                   ),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            children: [
-                              GestureDetector(
-                                onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => pg17()));
-                                },
-                                child: Container(
-                                    height: 50,
-                                    width: 150,
-                                    // color: Colors.white,
-                                    decoration: BoxDecoration(
-                                        color:Color(0xff7692ff),
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                          width: 0.5,
 
-                                          color: Colors.transparent,
-                                        ),
-                                        boxShadow: [
-                                          BoxShadow(
-
-                                            blurRadius: 0.5,
-                                          )
-                                        ]
-                                    ),
-
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          Text("Page # 17", style: TextStyle(fontWeight: FontWeight.w700,fontSize: 25,color: Colors.white),)
-
-                                        ],
-                                      ),
-                                    )
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-
-                      ],
-                    ),
-                  ),
 
 
                 ],
