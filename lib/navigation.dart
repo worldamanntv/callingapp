@@ -4,7 +4,7 @@ import 'package:untitled/pagetwo2.dart';
 import 'package:untitled/pg1.dart';
 import 'package:untitled/pg10.dart';
 import 'package:untitled/pg11.dart';
-import 'package:untitled/pg12.dart';
+
 import 'package:untitled/pg13.dart.dart';
 import 'package:untitled/pg14.dart';
 import 'package:untitled/pg15.dart';
